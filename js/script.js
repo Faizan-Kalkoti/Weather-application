@@ -32,14 +32,14 @@ var wind_degrees
 var wind_speed 
 
 
-parentcontainer1[0].style.backgroundImage = 'url(cloudy2.jpg)';
+parentcontainer1[0].style.backgroundImage = 'url(images/cloudy.jpg)';
 
 setInterval(()=>
 {
  setTimeout(()=>{
      setTimeout(()=>
       {
-        parentcontainer1[0].style.backgroundImage = 'url(cloudy2.jpg)';
+        parentcontainer1[0].style.backgroundImage = 'url(images/cloudy2.jpg)';
       },2000)
       parentcontainer1[0].style.backgroundImage = 'url(images/cloudy.jpg)';
  },2000)
@@ -74,6 +74,7 @@ fetch(url, options)
     {
         var sun_rise1 = sunrise %100000;
         
+//To convert from unix date timestamp to ist time 
 
         var myDate = new Date(sunrise*1000);
         var sunrisefinal = myDate.toGMTString()+"<br>"+myDate.toLocaleString();
