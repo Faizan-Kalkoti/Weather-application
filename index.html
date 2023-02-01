@@ -17,7 +17,7 @@
 <!-- Navbar for wheather website-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Weather</a>
+      <a class="navbar-brand" href="#index.html">Weather</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,13 +31,80 @@
           </li>
         </ul>
         <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">login</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Sign up</a></li>
+        <li class="nav-item"> <a class="nav-link active" aria-current="page"  data-bs-toggle="modal" href="#loginModalToggle">
+          login</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page"  data-bs-toggle="modal" href="#signupModalToggle2">
+          Sign up</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+
+  
+  <!--login button-->
+  <div class="modal fade" id="loginModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Login</h1> 
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Email</label>
+              <input type="text" class="form-control" id="lrecipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Passcode</label>
+              <input class="form-control" id="lmessage-text"></input>
+            </div>
+          </form>
+          <p>Don't have an account? &nbsp<a data-bs-target="#signupModalToggle2" data-bs-toggle="modal" class="tiki">Sign Up</a></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn_sl" data-bs-dismiss="modal">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--sign up button-->
+
+  <div class="modal fade" id="signupModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Email</label>
+              <input type="text" class="form-control" id="srecipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Passcode</label>
+              <input class="form-control" id="smessage-text"></input>
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Confirm Passcode</label>
+              <input class="form-control" id="smessage-text2"></input>
+            </div>
+          </form>
+          <p>Have an account? &nbsp<a data-bs-target="#loginModalToggle" data-bs-toggle="modal" class="tiki">Login</a></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn_sl" data-bs-dismiss="modal">Sign Up</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--search city -->
   <div class="mainer">
     
     <div class="container1">
@@ -48,19 +115,19 @@
             <button class="btn btn-outline-success" id="searchcitybtn" type="submit">Search</button>
           </form>
           
-      </div>
-
-      
+      </div>   
   </div>
 
+  <!--Show weather-->
       <div class="showtemp">
         <div class="showcity" id="showcity">
  <h1>Weather for City</h1> 
         </div>
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="card1">
+
               <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card mb-4 rounded-3 shadow-lg" style="background-color: rgba(250, 250, 250, 0.7);">
                   <div class="card-header py-3">
                     <h4 class="my-0 fw-normal">Temperatures</h4>
                   </div>
@@ -72,22 +139,24 @@
                      </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
+
+              <div class="col ">
+                <div class="card mb-4 rounded-3 shadow-lg" style="background-color: rgba(250, 250, 250, 0.7);">
                   <div class="card-header py-3">
                     <h4 class="my-0 fw-normal">Humidity</h4>
                   </div>
                   <div class="card-body">
                     <h1 class="card-title pricing-card-title" id="humidity">0 %</h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                      <li id="sunrise">sunrise at: 0:00 am</li>
+                      <li id="sunrise">Sunrise at: 0:00 am</li>
                       
                     </ul>
                      </div>
                 </div>
               </div>
+
               <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm ">
+                <div class="card mb-4 rounded-3 shadow-lg" style="background-color: rgba(250, 250, 250, 0.7);">
                   <div class="card-header py-3 ">
                     <h4 class="my-0 fw-normal">Wind</h4>
                   </div>
@@ -108,7 +177,7 @@
 
       
       <div class="footer">
-        <hr style="border: solid 0.05em; color: black; margin-top: 0%; width: 100%;">
+        <hr style="border: solid 0.05em; color: rgb(255, 230, 201); margin-top: 0%; width: 100%;">
         <div class="foot row">
           <div class="ftleft row" ><p class="h45">Copyright © 2023 Faizan Kalkoti</p></div>
         <div class="ftup col-lg-3">

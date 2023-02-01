@@ -32,18 +32,18 @@ var wind_degrees
 var wind_speed 
 
 
-parentcontainer1[0].style.backgroundImage = 'url(images/cloudy.jpg)';
+// parentcontainer1[0].style.backgroundImage = 'url(images/cloudy.jpg)';
 
-setInterval(()=>
-{
- setTimeout(()=>{
-     setTimeout(()=>
-      {
-        parentcontainer1[0].style.backgroundImage = 'url(images/cloudy2.jpg)';
-      },2000)
-      parentcontainer1[0].style.backgroundImage = 'url(images/cloudy.jpg)';
- },2000)
-}, 4000)
+// setInterval(()=>
+// {
+//  setTimeout(()=>{
+//      setTimeout(()=>
+//       {
+//         parentcontainer1[0].style.backgroundImage = 'url(images/cloudy2.jpg)';
+//       },2000)
+//       parentcontainer1[0].style.backgroundImage = 'url(images/cloudy.jpg)';
+//  },2000)
+// }, 4000)
 
 
 
